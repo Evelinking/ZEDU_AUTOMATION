@@ -1,10 +1,14 @@
 import pytest
 import os
+import sys
 from dotenv import load_dotenv
-# We import from the inner folder where the code actually lives
-from ZEDU_AUTOMATION.utils.auth import get_auth_token
 
-# This loads the hidden GitHub Secrets
+# This line fixes the "No module named ZEDU_AUTOMATION" error
+# It tells Python to look inside the current folder for your code
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '.')))
+
+from utils.auth import get_auth_token
+
 load_dotenv()
 
 @pytest.fixture(scope="session")
