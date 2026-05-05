@@ -1,5 +1,11 @@
 import pytest
-from utils.auth import get_auth_token
+import os
+from dotenv import load_dotenv
+# We import from the inner folder where the code actually lives
+from ZEDU_AUTOMATION.utils.auth import get_auth_token
+
+# This loads the hidden GitHub Secrets
+load_dotenv()
 
 @pytest.fixture(scope="session")
 def auth_headers():
