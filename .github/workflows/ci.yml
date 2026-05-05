@@ -30,4 +30,4 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         BASE_URL: ${{ secrets.BASE_URL }}
       run: |
-        pytest ZEDU_AUTOMATION/tests
+       pytest ZEDU_AUTOMATION/ZEDU_AUTOMATION/tests
