@@ -3,8 +3,7 @@ import os
 import sys
 from dotenv import load_dotenv
 
-# This line fixes the folder path so the robot can find 'utils'
-# Note the DOUBLE underscores in _file_
+# This points the robot to the right folder
 sys.path.append(os.path.dirname(os.path.abspath(_file_)))
 
 from utils.auth import get_auth_token
